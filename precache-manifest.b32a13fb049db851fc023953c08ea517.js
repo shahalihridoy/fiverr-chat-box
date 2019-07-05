@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3287f8ef45bcb09fc2a767bdd6b213a",
+    "revision": "ec40390bc43103e497792fc1c4037b79",
     "url": "/fiverr-chat-box/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fiverr-chat-box/static/css/2.5349a374.chunk.css"
   },
   {
-    "revision": "628392a8bae07f593a27",
+    "revision": "85f5a6fbb451c61ede50",
     "url": "/fiverr-chat-box/static/css/main.ddc5a037.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fiverr-chat-box/static/js/2.189846c2.chunk.js"
   },
   {
-    "revision": "628392a8bae07f593a27",
-    "url": "/fiverr-chat-box/static/js/main.5eb3a53a.chunk.js"
+    "revision": "85f5a6fbb451c61ede50",
+    "url": "/fiverr-chat-box/static/js/main.91366179.chunk.js"
   },
   {
     "revision": "232a410305cc42d88089",
