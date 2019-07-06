@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fiverr-chat-box/precache-manifest.0cca9cb425da387e7ec105b4f5ec7c9c.js"
+  "/fiverr-chat-box/precache-manifest.24c9527c92a524386a9ec543a905e073.js"
 );
 
 self.addEventListener('message', (event) => {
