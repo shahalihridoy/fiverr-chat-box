@@ -1,0 +1,40 @@
+.sidenav {
+  width: 260px;
+  background: $light-gray;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh !important;
+  z-index: 3;
+  transition: width 300ms ease;
+  .sidenav__header {
+    background: white;
+    img {
+      height: 48px;
+    }
+  }
+
+  .sidenav__links {
+    div {
+      min-width: 260px;
+      margin-bottom: 1px;
+      padding: 20px 24px;
+      background: white;
+    }
+  }
+}
+.sidenav__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.64);
+}
+.collapse {
+  width: 0px !important;
+  overflow: hidden !important;
+}

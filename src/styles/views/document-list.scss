@@ -1,0 +1,39 @@
+.document-list-container {
+  background: lighten($light-gray, $amount: 4);
+  .document-header {
+    height: 56px;
+    box-shadow: $box-shadow;
+    input {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background: transparent;
+    }
+    ::placeholder {
+      color: white;
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: white;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: white;
+    }
+  }
+
+  .document-list {
+    margin-top: 5px;
+    height: calc(100vh - 56px);
+  }
+
+  .document-card {
+    border-radius: 4px;
+    img {
+      height: 48px;
+    }
+  }
+}
