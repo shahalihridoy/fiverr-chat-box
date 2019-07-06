@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/fiverr-chat-box/static/css/main.369729b4.chunk.css",
-    "main.js": "/fiverr-chat-box/static/js/main.d81db06e.chunk.js",
-    "main.js.map": "/fiverr-chat-box/static/js/main.d81db06e.chunk.js.map",
+    "main.css": "/fiverr-chat-box/static/css/main.2e182010.chunk.css",
+    "main.js": "/fiverr-chat-box/static/js/main.dca29f3a.chunk.js",
+    "main.js.map": "/fiverr-chat-box/static/js/main.dca29f3a.chunk.js.map",
     "runtime~main.js": "/fiverr-chat-box/static/js/runtime~main.dff58b98.js",
     "runtime~main.js.map": "/fiverr-chat-box/static/js/runtime~main.dff58b98.js.map",
     "static/css/2.5349a374.chunk.css": "/fiverr-chat-box/static/css/2.5349a374.chunk.css",
     "static/js/2.a54bdae7.chunk.js": "/fiverr-chat-box/static/js/2.a54bdae7.chunk.js",
     "static/js/2.a54bdae7.chunk.js.map": "/fiverr-chat-box/static/js/2.a54bdae7.chunk.js.map",
     "index.html": "/fiverr-chat-box/index.html",
-    "precache-manifest.24c9527c92a524386a9ec543a905e073.js": "/fiverr-chat-box/precache-manifest.24c9527c92a524386a9ec543a905e073.js",
+    "precache-manifest.b79cd00f5e2abf0ad342a965517a7cfe.js": "/fiverr-chat-box/precache-manifest.b79cd00f5e2abf0ad342a965517a7cfe.js",
     "service-worker.js": "/fiverr-chat-box/service-worker.js",
     "static/css/2.5349a374.chunk.css.map": "/fiverr-chat-box/static/css/2.5349a374.chunk.css.map",
-    "static/css/main.369729b4.chunk.css.map": "/fiverr-chat-box/static/css/main.369729b4.chunk.css.map"
+    "static/css/main.2e182010.chunk.css.map": "/fiverr-chat-box/static/css/main.2e182010.chunk.css.map"
   }
 }
