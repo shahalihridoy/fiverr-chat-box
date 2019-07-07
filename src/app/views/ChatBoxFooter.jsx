@@ -16,6 +16,7 @@ class ChatBoxFooter extends Component {
     return (
       <div className="chat-box__footer flex flex-middle px-24 pt-4 relative">
         <TextField
+          className="bg-white"
           variant="outlined"
           multiline={true}
           rows={4}

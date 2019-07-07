@@ -1,12 +1,10 @@
 import React, { Component, Fragment } from "react";
-import PerfectScrollbar from "react-perfect-scrollbar";
 import SimpleMessage from "../components/SimpleMessage";
 import JobLocationMessage from "../components/JobLocationMessage";
 import UploadResumeMessage from "../components/UploadResumeMessage";
 import AlertMessage from "../components/AlertMessage";
 
 class ChatBoxContainer extends Component {
-  perfectScrollBar;
   bottomRef = React.createRef();
   state = {
     messageList: []
@@ -81,11 +79,7 @@ class ChatBoxContainer extends Component {
   render() {
     let { messageList } = this.state;
     return (
-      <div
-        style={{ overflow: "scroll" }}
-        containerRef={ref => (this.perfectScrollBar = ref)}
-        className="h-100 relative px-24"
-      >
+      <div className="h-100 relative px-24 scroll-y">
         {messageList.map((message, index) => {
           switch (message.type) {
             case "simple":
