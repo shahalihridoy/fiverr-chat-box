@@ -83,7 +83,7 @@ class DocumentList extends Component {
   render() {
     let { showSearchOpton, searchQuery } = this.state;
     return (
-      <div className="document-list-container relative">
+      <div className="document-list-container relative x-center">
         <div className="document-header bg-primary flex flex-middle flex-space-between pl-16 pr-4">
           {showSearchOpton ? (
             <Fragment>

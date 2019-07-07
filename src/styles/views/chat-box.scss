@@ -1,7 +1,7 @@
 .chat-box {
   background: lighten($light-gray, $amount: 4);
   height: 100vh;
-
+  max-width: 420px;
   .chat-box__header {
     background: white;
     box-shadow: $box-shadow;
@@ -26,7 +26,7 @@
   }
 
   .chat-box__container {
-    height: calc(100vh - 92px - 52px - 50px);
+    height: calc(100vh - 92px - 52px - 70px);
   }
 
   .chat-box__footer {

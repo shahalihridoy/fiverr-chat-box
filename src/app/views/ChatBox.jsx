@@ -16,7 +16,7 @@ class ChatBox extends Component {
   render() {
     let { showSidenav } = this.state;
     return (
-      <div className="chat-box relative">
+      <div className="chat-box relative x-center">
         <Sidenav onSidenavToggle={this.handleSidenavToggle} {...this.state} />
         <div>
           <ChatBoxHeader onSidenavToggle={this.handleSidenavToggle} />

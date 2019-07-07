@@ -1,4 +1,5 @@
 .document-list-container {
+  max-width: 420px;
   background: lighten($light-gray, $amount: 4);
   .document-header {
     height: 56px;

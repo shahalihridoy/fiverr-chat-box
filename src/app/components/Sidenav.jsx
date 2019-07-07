@@ -5,7 +5,7 @@ const Sidenav = ({ onSidenavToggle, showSidenav }) => {
   return (
     <Fragment>
       <div className={`sidenav ${showSidenav ? "" : "collapse"}`}>
-        <div className="sidenav__header py-12 px-16">
+        <div className="sidenav__header w-100 py-12 px-16">
           <img src="./assets/images/logo.png" alt="elepha.io" />
         </div>
         <div className="sidenav__links mt-8">

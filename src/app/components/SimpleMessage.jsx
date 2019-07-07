@@ -31,11 +31,7 @@ const SimpleMessage = ({
             />
           </div>
           <div className="py-12 px-16 w-100">
-            <p
-              className={
-                isMyMessage() ? "m-0 fw-600 pre text-white" : "m-0 fw-600"
-              }
-            >
+            <p className={isMyMessage() ? "m-0 pre text-white" : "m-0"}>
               {message}
             </p>
             <p

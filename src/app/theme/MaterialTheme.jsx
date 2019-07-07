@@ -16,6 +16,11 @@ const materialTheme = createMuiTheme({
         minWidth: "320px",
         borderRadius: "8px"
       }
+    },
+    MuiOutlinedInput: {
+      root: {
+        borderRadius: "24px !important"
+      }
     }
   }
 });
