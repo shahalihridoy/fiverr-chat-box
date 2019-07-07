@@ -22,21 +22,13 @@ class ChatBox extends Component {
     return (
       <div className="chat-box relative x-center">
         <Sidenav onSidenavToggle={this.handleSidenavToggle} {...this.state} />
-        <div>
+        <div className="h-100vh overflow-hidden">
           <ChatBoxHeader
             {...this.state}
             onOperatorHide={this.handleOperatorHide}
             onSidenavToggle={this.handleSidenavToggle}
           />
-          <div
-            className={`${
-              this.state.showOperator
-                ? "chat-box__container-collapse"
-                : "chat-box__container-hide"
-            } relative mt-4`}
-          >
-            <ChatBoxContainer />
-          </div>
+          <ChatBoxContainer />
           <ChatBoxFooter />
         </div>
       </div>

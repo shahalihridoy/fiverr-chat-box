@@ -14,12 +14,12 @@ class ChatBoxFooter extends Component {
 
   render() {
     return (
-      <div className="chat-box__footer flex flex-middle px-24 pt-4 relative">
+      <div className="chat-box__footer flex flex-middle px-24 py-4 relative">
         <TextField
           className="bg-white"
           variant="outlined"
           multiline={true}
-          rows={4}
+          rowsMax={4}
           fullWidth
           placeholder="Type Message..."
           value={this.state.message}

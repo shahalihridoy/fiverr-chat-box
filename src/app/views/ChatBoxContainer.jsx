@@ -72,14 +72,10 @@ class ChatBoxContainer extends Component {
     this.scrollToBottom();
   }
 
-  componentDidUpdate() {
-    this.scrollToBottom();
-  }
-
   render() {
     let { messageList } = this.state;
     return (
-      <div className="h-100 relative px-24 scroll-y">
+      <div className="chat-box__container relative px-24 scroll-y">
         {messageList.map((message, index) => {
           switch (message.type) {
             case "simple":
