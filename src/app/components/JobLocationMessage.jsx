@@ -2,15 +2,16 @@ import React from "react";
 import SimpleMessage from "./SimpleMessage";
 import { Fab } from "@material-ui/core";
 
-const JobLocationMessage = ({ region = [], ...rest }) => {
-  const handleRegionSelect = region => {
-    console.log(region);
+const JobLocationMessage = ({ option = [], ...rest }) => {
+  const handleRegionSelect = option => {
+    // save user response to your database here
+    console.log(option);
   };
 
   return (
     <SimpleMessage {...rest}>
       <div className="flex flex-wrap flex-middle flex-center">
-        {region.map(location => (
+        {option.map(location => (
           <Fab
             key={location}
             onClick={() => handleRegionSelect(location)}

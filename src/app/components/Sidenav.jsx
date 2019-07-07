@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import PerfectScrollbar from "react-perfect-scrollbar";
 
 const Sidenav = ({ onSidenavToggle, showSidenav }) => {
   return (
-    <Fragment>
+    <PerfectScrollbar>
       <div className={`sidenav ${showSidenav ? "" : "collapse"}`}>
-        <div className="sidenav__header w-100 py-12 px-16">
+        <div className="sidenav__header flex flex-middle flex-center px-16">
           <img src="./assets/images/logo.png" alt="elepha.io" />
         </div>
         <div className="sidenav__links mt-8">
@@ -35,7 +36,7 @@ const Sidenav = ({ onSidenavToggle, showSidenav }) => {
       {showSidenav ? (
         <div className="sidenav__overlay" onClick={onSidenavToggle} />
       ) : null}
-    </Fragment>
+    </PerfectScrollbar>
   );
 };
 

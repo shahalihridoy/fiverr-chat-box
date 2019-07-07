@@ -18,7 +18,7 @@ class ChatBoxFooter extends Component {
         <TextField
           variant="outlined"
           multiline={true}
-          rowsMax={2}
+          rows={4}
           fullWidth
           placeholder="Type Message..."
           value={this.state.message}

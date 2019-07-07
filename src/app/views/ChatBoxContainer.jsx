@@ -7,7 +7,7 @@ import AlertMessage from "../components/AlertMessage";
 
 class ChatBoxContainer extends Component {
   perfectScrollBar;
-
+  bottomRef = React.createRef();
   state = {
     messageList: []
   };
@@ -34,7 +34,7 @@ class ChatBoxContainer extends Component {
           {
             type: "region", //message type for selecting region
             message: "Hello, Welcome to Elepha.io",
-            region: ["mumbai", "pune", "calcutaa", "assam"],
+            option: ["mumbai", "pune", "calcutaa", "assam"],
             time: "09:00 AM",
             senderUserID: "121"
           },
@@ -63,58 +63,65 @@ class ChatBoxContainer extends Component {
       }, 1000);
     }).then(messageList => {
       this.setState({ messageList });
-      this.perfectScrollBar.scrollTop = this.perfectScrollBar.clientHeight;
     });
   }
 
+  scrollToBottom = () => {
+    this.bottomRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   componentDidMount() {
-    this.perfectScrollBar.scrollTop = this.perfectScrollBar.clientHeight;
+    this.scrollToBottom();
+  }
+
+  componentDidUpdate() {
+    this.scrollToBottom();
   }
 
   render() {
     let { messageList } = this.state;
     return (
-      <div className="chat-box__container pt-4">
-        <PerfectScrollbar
-          containerRef={ref => (this.perfectScrollBar = ref)}
-          className="h-100 relative px-24"
-        >
-          {messageList.map((message, index) => {
-            switch (message.type) {
-              case "simple":
-                return (
-                  <Fragment key={index}>
-                    <SimpleMessage {...message} currentUserID="222" />
-                    <div className="py-16" />
-                  </Fragment>
-                );
+      <div
+        style={{ overflow: "scroll" }}
+        containerRef={ref => (this.perfectScrollBar = ref)}
+        className="h-100 relative px-24"
+      >
+        {messageList.map((message, index) => {
+          switch (message.type) {
+            case "simple":
+              return (
+                <Fragment key={index}>
+                  <SimpleMessage {...message} currentUserID="222" />
+                  <div className="py-16" />
+                </Fragment>
+              );
 
-              case "region":
-                return (
-                  <Fragment key={index}>
-                    <JobLocationMessage {...message} currentUserID="222" />
-                    <div className="py-16" />
-                  </Fragment>
-                );
+            case "region":
+              return (
+                <Fragment key={index}>
+                  <JobLocationMessage {...message} currentUserID="222" />
+                  <div className="py-16" />
+                </Fragment>
+              );
 
-              case "upload":
-                return (
-                  <Fragment key={index}>
-                    <UploadResumeMessage {...message} currentUserID="222" />
-                    <div className="py-16" />
-                  </Fragment>
-                );
+            case "upload":
+              return (
+                <Fragment key={index}>
+                  <UploadResumeMessage {...message} currentUserID="222" />
+                  <div className="py-16" />
+                </Fragment>
+              );
 
-              case "alert":
-                return message.showed ? null : (
-                  <AlertMessage key={index} {...message} />
-                );
+            case "alert":
+              return message.showed ? null : (
+                <AlertMessage key={index} {...message} />
+              );
 
-              default:
-                break;
-            }
-          })}
-        </PerfectScrollbar>
+            default:
+              break;
+          }
+        })}
+        <div ref={this.bottomRef} />
       </div>
     );
   }

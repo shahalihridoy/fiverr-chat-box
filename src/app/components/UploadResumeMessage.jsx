@@ -8,6 +8,8 @@ const UploadResumeMessage = ({ region = [], ...rest }) => {
   const handleResumeSelection = event => {
     event.persist();
     let file = event.target.files[0];
+
+    // upload your file to your serve here
     console.log(file);
   };
 

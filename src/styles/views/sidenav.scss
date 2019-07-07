@@ -11,8 +11,9 @@
   transition: width 300ms ease;
   .sidenav__header {
     background: white;
+    height: 56px;
     img {
-      height: 48px;
+      height: 48px !important;
     }
   }
 
