@@ -3,11 +3,15 @@ import SimpleMessage from "../components/SimpleMessage";
 import JobLocationMessage from "../components/JobLocationMessage";
 import UploadResumeMessage from "../components/UploadResumeMessage";
 import AlertMessage from "../components/AlertMessage";
+import { Fab } from "@material-ui/core";
 
 class ChatBoxContainer extends Component {
   bottomRef = React.createRef();
   state = {
-    messageList: []
+    messageList: [],
+    showAlert: true,
+    phone: "",
+    city: ""
   };
 
   constructor(props) {
@@ -64,6 +68,14 @@ class ChatBoxContainer extends Component {
     });
   }
 
+  showAlertMessage = (phone, city) => {
+    this.setState({ showAlert: true, phone, city });
+  };
+
+  handleAlertMessageClose = () => {
+    this.setState({ showAlert: false });
+  };
+
   scrollToBottom = () => {
     this.bottomRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -72,8 +84,13 @@ class ChatBoxContainer extends Component {
     this.scrollToBottom();
   }
 
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
   render() {
-    let { messageList } = this.state;
+    let { messageList, showAlert, city, phone } = this.state;
+
     return (
       <div className="chat-box__container relative px-24 scroll-y">
         {messageList.map((message, index) => {
@@ -102,15 +119,51 @@ class ChatBoxContainer extends Component {
                 </Fragment>
               );
 
-            case "alert":
-              return message.showed ? null : (
-                <AlertMessage key={index} {...message} />
-              );
-
             default:
               break;
           }
         })}
+
+        <AlertMessage
+          open={showAlert}
+          onAlertMessageClose={this.handleAlertMessageClose}
+        >
+          <div className="px-8">
+            <div className="py-4">
+              <b>Phone no: </b>
+              <span>{phone}</span>
+            </div>
+            <div className="py-4">
+              <b>City: </b>
+              <span className="capitalize">{city}</span>
+            </div>
+            <div className="py-4">
+              <b>Resume: </b>
+              <span>Resume</span>
+            </div>
+          </div>
+
+          <div className="pt-24 pb-24 flex flex-center">
+            <Fab
+              color="primary"
+              variant="extended"
+              size="medium"
+              className="mx-8 px-48 capitalize"
+              onClick={this.handleAlertMessageClose}
+            >
+              yes
+            </Fab>
+            <Fab
+              color="primary"
+              variant="extended"
+              size="medium"
+              className="mx-8 px-48 capitalize"
+              onClick={this.handleAlertMessageClose}
+            >
+              no
+            </Fab>
+          </div>
+        </AlertMessage>
         <div ref={this.bottomRef} />
       </div>
     );
