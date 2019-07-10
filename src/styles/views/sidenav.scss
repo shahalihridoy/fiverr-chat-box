@@ -2,7 +2,8 @@
   width: 260px;
   background: $light-gray;
   position: absolute;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   left: 0;
   top: 0;
   bottom: 0;

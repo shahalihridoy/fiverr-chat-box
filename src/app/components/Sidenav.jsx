@@ -4,7 +4,7 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 
 const Sidenav = ({ onSidenavToggle, showSidenav }) => {
   return (
-    <PerfectScrollbar>
+    <div>
       <div className={`sidenav ${showSidenav ? "" : "collapse"}`}>
         <div className="sidenav__header flex flex-middle flex-center px-16">
           <img src="./assets/images/logo.png" alt="elepha.io" />
@@ -36,7 +36,7 @@ const Sidenav = ({ onSidenavToggle, showSidenav }) => {
       {showSidenav ? (
         <div className="sidenav__overlay" onClick={onSidenavToggle} />
       ) : null}
-    </PerfectScrollbar>
+    </div>
   );
 };
 

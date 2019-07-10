@@ -1,15 +1,12 @@
 .chat-box {
   background: lighten($light-gray, $amount: 4);
-  height: 100vh;
   max-width: 420px;
+  display: flex;
+  flex-direction: column;
 
   .chat-box__header {
     background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    position: relative;
     .header__logo {
       height: 56px;
       .header__home-icon {
@@ -41,16 +38,8 @@
     }
   }
 
-  .chat-box__container {
-    margin-top: 60px;
-    height: calc(100% - 100px);
-  }
-
   .chat-box__footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    position: relative;
     background: white;
   }
 }

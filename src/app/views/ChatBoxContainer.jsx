@@ -9,7 +9,7 @@ class ChatBoxContainer extends Component {
   bottomRef = React.createRef();
   state = {
     messageList: [],
-    showAlert: true,
+    showAlert: false,
     phone: "",
     city: ""
   };
@@ -23,7 +23,8 @@ class ChatBoxContainer extends Component {
         resolve([
           {
             type: "simple", //message type for general message
-            message: "Hello, Welcome to Elepha.io",
+            message:
+              "Hello, Welcome to Elepha.ioHello, Welcome to Elepha.ioHello, Welcome to Elepha.ioHello, Welcome to Elepha.ioHello, Welcome to Elepha.ioHello, Welcome to Elepha.ioHello, Welcome to Elepha.io",
             time: "09:00 AM",
             senderUserID: "121"
           },
@@ -82,6 +83,7 @@ class ChatBoxContainer extends Component {
 
   componentDidMount() {
     this.scrollToBottom();
+    this.showAlertMessage("01975208815", "Dhaka");
   }
 
   componentDidUpdate() {
@@ -92,7 +94,7 @@ class ChatBoxContainer extends Component {
     let { messageList, showAlert, city, phone } = this.state;
 
     return (
-      <div className="chat-box__container relative px-24 scroll-y">
+      <Fragment>
         {messageList.map((message, index) => {
           switch (message.type) {
             case "simple":
@@ -165,7 +167,7 @@ class ChatBoxContainer extends Component {
           </div>
         </AlertMessage>
         <div ref={this.bottomRef} />
-      </div>
+      </Fragment>
     );
   }
 }

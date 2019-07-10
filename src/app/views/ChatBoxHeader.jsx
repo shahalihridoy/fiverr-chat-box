@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Icon, Avatar, IconButton } from "@material-ui/core";
 
 const ChatBoxHeader = ({ onSidenavToggle, onOperatorHide, showOperator }) => {
   return (
-    <div className="chat-box__header">
+    <Fragment>
       <div className="header__logo flex flex-middle flex-center">
         <img
           onClick={onSidenavToggle}
@@ -27,7 +27,7 @@ const ChatBoxHeader = ({ onSidenavToggle, onOperatorHide, showOperator }) => {
           <Icon className="text-white">close</Icon>
         </IconButton>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import ChatBoxContainer from "./ChatBoxContainer";
 import ChatBoxFooter from "./ChatBoxFooter";
 import ChatBoxHeader from "./ChatBoxHeader";
@@ -20,18 +20,24 @@ class ChatBox extends Component {
 
   render() {
     return (
-      <div className="chat-box relative x-center">
+      <Fragment>
         <Sidenav onSidenavToggle={this.handleSidenavToggle} {...this.state} />
-        <div className="h-100vh overflow-hidden">
-          <ChatBoxHeader
-            {...this.state}
-            onOperatorHide={this.handleOperatorHide}
-            onSidenavToggle={this.handleSidenavToggle}
-          />
-          <ChatBoxContainer />
-          <ChatBoxFooter />
+        <div className="chat-box h-100vh overflow-hidden relative x-center">
+          <div className="chat-box__header">
+            <ChatBoxHeader
+              {...this.state}
+              onOperatorHide={this.handleOperatorHide}
+              onSidenavToggle={this.handleSidenavToggle}
+            />
+          </div>
+          <div className="chat-box__container relative mt-4 px-24 scroll-y">
+            <ChatBoxContainer />
+          </div>
+          <div className="chat-box__footer">
+            <ChatBoxFooter />
+          </div>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }
